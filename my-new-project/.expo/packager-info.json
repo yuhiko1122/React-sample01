@@ -1,5 +1,10 @@
 {
-  "expoServerPort": null,
+  "expoServerPort": 19000,
   "packagerPort": 19000,
-  "devToolsPort": 19002
+  "devToolsPort": 19002,
+  "expoServerNgrokUrl": "https://pj-jbq.yuppy.my-new-project.exp.direct",
+  "packagerNgrokUrl": "https://pj-jbq.yuppy.my-new-project.exp.direct",
+  "ngrokPid": 10832,
+  "packagerPid": null,
+  "webpackServerPort": null
 }
