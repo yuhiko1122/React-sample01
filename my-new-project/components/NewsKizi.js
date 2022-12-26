@@ -1,7 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-const NewsKizi = ({ imageuri, title, subtext }) => {
+const NewsKizi = ({ imageuri, title, subtext, onPress }) => {
   var data = new Date(subtext);
   var year = data.getFullYear();
   var month = data.getMonth() + 1;
@@ -9,7 +9,7 @@ const NewsKizi = ({ imageuri, title, subtext }) => {
   var koukaihiduke = year + "/" + month + "/" + day;
 
   return (
-    <View style={styles.box}>
+    <TouchableOpacity style={styles.box} onPress={onPress}>
       <View style={styles.moziBox}>
         <Text numberOfLines={3} style={styles.text}>
           {title}
@@ -20,7 +20,7 @@ const NewsKizi = ({ imageuri, title, subtext }) => {
       <View style={styles.gazoBox}>
         <Image style={{ width: 100, height: 100 }} source={{ url: imageuri }} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
